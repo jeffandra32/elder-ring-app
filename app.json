@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "elder-ring-app",
+    "slug": "elder-ring-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
