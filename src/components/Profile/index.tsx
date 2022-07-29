@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, Alert } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 
@@ -6,8 +6,23 @@ import Logo from '@assets/logo-elder.svg';
 import { Avatar } from '../Avatar';
 import { styles } from './styles';
 import { RFValue } from 'react-native-responsive-fontsize';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export function Profile() {
+  const [user, setUser] = useState<any>(null);
+  async function loadUserStorageData() {
+
+    const storedUser = await AsyncStorage.getItem('userName');
+
+    if (storedUser) {
+      const userData = JSON.parse(storedUser);
+      setUser(userData);
+    }
+  }
+
+  useEffect(() => {
+    loadUserStorageData();
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -22,8 +37,8 @@ export function Profile() {
             Olá,
           </Text>
 
-          <Text style={styles.username}>
-            Jefferson
+          <Text numberOfLines={1} style={styles.username}>
+            {user}
           </Text>
         </View>
 

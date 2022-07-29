@@ -16,6 +16,8 @@ import Ammo from '@assets/ammo.svg'
 import Item from '@assets/item.svg'
 import Boss from '@assets/boss.svg'
 import { Category } from '../Category';
+import { RootNavigator } from '../../utils/RootNavigator';
+import { useNavigation } from '@react-navigation/native';
 
 type Props = {
   categorySelected: string;
@@ -28,7 +30,7 @@ export function CategorySelect({
   setCategory,
   hasCheckBox = false,
 }: Props) {
-
+  const { navigate } = useNavigation<any>();
   return (
     <>
       <ScrollView>
@@ -38,6 +40,7 @@ export function CategorySelect({
             title={'Ashs of Wars'}
             icon={Ashs}
             hasCheckBox={hasCheckBox}
+            onPress={() => navigate('AshesScreen')}
           />
 
           <Category
@@ -45,6 +48,7 @@ export function CategorySelect({
             title={'Shields'}
             icon={Shield}
             hasCheckBox={hasCheckBox}
+            onPress={() => navigate('ShieldsScreen')}
           />
 
           <Category
@@ -52,6 +56,7 @@ export function CategorySelect({
             title={'Talismans'}
             icon={Talisman}
             hasCheckBox={hasCheckBox}
+            onPress={() => navigate('TalismansScreen')}
           />
         </View>
 
@@ -61,6 +66,7 @@ export function CategorySelect({
             title={'Spirits'}
             icon={Spirit}
             hasCheckBox={hasCheckBox}
+            onPress={() => navigate('SpiritsScreen')}
           />
 
           <Category
@@ -68,6 +74,7 @@ export function CategorySelect({
             title={'Armors'}
             icon={Armor}
             hasCheckBox={hasCheckBox}
+            onPress={() => navigate('ArmorsScreen')}
           />
 
           <Category
@@ -75,6 +82,7 @@ export function CategorySelect({
             title={'Weapons'}
             icon={Weapon}
             hasCheckBox={hasCheckBox}
+            onPress={() => navigate('WeaponsScreen')}
           />
         </View>
 

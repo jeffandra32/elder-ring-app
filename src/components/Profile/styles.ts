@@ -21,6 +21,7 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.primary_400,
     fontSize: 18,
     color: theme.colors.heading,
+    width: 100,
   },
   message: {
     fontFamily: theme.fonts.primary_400,

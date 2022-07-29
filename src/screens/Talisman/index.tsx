@@ -45,7 +45,7 @@ export function TalismansScreen() {
         loading ? <Load /> : <CarList
           data={talismans}
           keyExtractor={(item: TalismanDTO) => item.id}
-          renderItem={(item: TalismanDTO) =>
+          renderItem={({ item }): JSX.Element =>
             <Talismans data={item} />
           }
         />

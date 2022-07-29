@@ -20,6 +20,7 @@ export function Home() {
         backgroundColor="transparent"
         barStyle="light-content"
       />
+
       <View style={styles.header}>
         <Profile />
       </View>
