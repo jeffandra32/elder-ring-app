@@ -3,22 +3,44 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "expo start --dev-client",
+    "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo-google-fonts/archivo": "^0.2.2",
+    "@expo-google-fonts/inter": "^0.2.2",
+    "@expo-google-fonts/merriweather": "^0.2.2",
+    "axios": "^0.27.2",
     "expo": "~45.0.0",
+    "expo-app-loading": "~2.0.0",
+    "expo-font": "~10.1.0",
+    "expo-linear-gradient": "~11.3.0",
     "expo-splash-screen": "~0.15.1",
     "expo-status-bar": "~1.3.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "0.68.2",
-    "react-native-web": "0.17.7"
+    "react-native-fast-image": "^8.5.11",
+    "react-native-gesture-handler": "~2.2.1",
+    "react-native-responsive-fontsize": "^0.5.1",
+    "react-native-svg": "12.3.0",
+    "react-native-web": "0.17.7",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-proposal-decorators": "^7.18.9",
+    "@types/react": "~17.0.21",
+    "@types/react-native": "~0.67.6",
+    "@types/styled-components-react-native": "^5.1.3",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "react-native-svg-transformer": "^1.0.0",
+    "typescript": "~4.3.5"
+  },
+  "resolutions": {
+    "@types/react": "^17"
   },
   "private": true
 }
