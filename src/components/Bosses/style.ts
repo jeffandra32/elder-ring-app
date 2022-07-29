@@ -20,7 +20,7 @@ export const Container = styled<any>(LinearGradient).attrs(() => ({
 `;
 
 export const Details = styled.View`
-  width: 70%;
+  width: 60%;
 `;
 
 export const Brand = styled.Text`

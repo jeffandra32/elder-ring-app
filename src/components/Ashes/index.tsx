@@ -37,10 +37,6 @@ export function Ashes({ data }: Props) {
             <Period>Afinidade</Period>
             <Price>{data?.affinity}</Price>
           </Rent>
-
-          <Type>
-            <GasolineSvg />
-          </Type>
         </About>
       </Details>
 

@@ -1,10 +1,7 @@
 import styled from 'styled-components/native';
-import { RectButton } from 'react-native-gesture-handler';
 import { RFValue } from 'react-native-responsive-fontsize';
-import FastImage from 'react-native-fast-image';
 
 import { LinearGradient } from 'expo-linear-gradient';
-import { getBottomSpace } from 'react-native-iphone-x-helper';
 import theme from '../../styles/theme';
 
 export const Container = styled<any>(LinearGradient).attrs(() => ({

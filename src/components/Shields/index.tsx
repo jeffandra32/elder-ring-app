@@ -1,4 +1,3 @@
-import { View, Text } from 'react-native'
 import React from 'react'
 import GasolineSvg from '@assets/gasoline.svg'
 
@@ -15,28 +14,30 @@ import {
   CarImage
 } from './style';
 
-interface ArmorData {
+interface ShieldData {
   name: string;
   category: string;
   image: string;
 }
 
 interface Props {
-  data: ArmorData;
+  data: ShieldData;
 }
 
-export function Armors({ data }: Props) {
+export function Shields({ data }: Props) {
   return (
     <Container>
       <Details>
-        <Brand>Equipamento</Brand>
-        <Name numberOfLines={1}>{data?.name}</Name>
+        <Brand>Shield</Brand>
+        <Name numberOfLines={2}>{data?.name}</Name>
 
         <About>
           <Rent>
-            <Period>Categoria</Period>
+            <Period>Category</Period>
             <Price>{data?.category}</Price>
           </Rent>
+
+
         </About>
       </Details>
 

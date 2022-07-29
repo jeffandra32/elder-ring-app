@@ -3,6 +3,9 @@ import { StatusBar } from 'react-native';
 import { Container } from './styles';
 import { ArmorsScreen } from '../Armor';
 import { AshesScreen } from '../Ashes';
+import { BossesScreen } from '../Boss';
+import { TalismansScreen } from '../Talisman';
+import { ShieldsScreen } from '../Shields';
 
 
 
@@ -14,7 +17,7 @@ export function Home() {
         backgroundColor="transparent"
         barStyle="light-content"
       />
-      <AshesScreen />
+      <ShieldsScreen />
 
     </Container>
   )
