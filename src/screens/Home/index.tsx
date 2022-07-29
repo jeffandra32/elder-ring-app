@@ -1,25 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import { StatusBar } from 'react-native';
-import { Container } from './styles';
-import { ArmorsScreen } from '../Armor';
-import { AshesScreen } from '../Ashes';
-import { BossesScreen } from '../Boss';
-import { TalismansScreen } from '../Talisman';
-import { ShieldsScreen } from '../Shields';
+import { StatusBar, View } from 'react-native';
+import { styles } from './styles';
+import { CategorySelect } from '@components/CategorySelect';
+import { Background } from '@components/Background';
+import { Profile } from '@components/Profile';
 
 
 
 export function Home() {
+  const [category, setCategory] = useState('');
+
+  function handleCategorySelect(categoryId: string) {
+    categoryId === category ? setCategory('') : setCategory(categoryId);
+  }
   return (
-    <Container>
+    <Background>
       <StatusBar
         translucent
         backgroundColor="transparent"
         barStyle="light-content"
       />
-      <ShieldsScreen />
+      <View style={styles.header}>
+        <Profile />
+      </View>
 
-    </Container>
+      <CategorySelect
+        categorySelected={category}
+        setCategory={handleCategorySelect}
+      />
+    </Background>
   )
 }
 

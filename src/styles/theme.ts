@@ -18,6 +18,24 @@ export default {
     shape: '#e1e1e8',
     shape_dark: '#29292e',
     gold: '#ffbf00',
+    primary: '#E51C44',
+
+    secondary100: '#000000',
+    secondary90: '#292929',
+    secondary80: '#4e4e4e',
+    secondary85: '#171F52',
+    secondary70: '#000000',
+    secondary60: '#000000',
+    secondary50: '#292929',
+    secondary40: '#000000',
+    secondary30: '#495BCC',
+
+    overlay: 'rgba(0,0,0,0.7)',
+    highlight: '#ABB1CC',
+    heading: '#DDE3F0',
+    on: '#32BD50',
+
+    discord: '#7289da',
 
     gradiente: ['#292929', '#111111'],
   },

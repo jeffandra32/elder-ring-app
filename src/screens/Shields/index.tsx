@@ -45,7 +45,7 @@ export function ShieldsScreen() {
         loading ? <Load /> : <CarList
           data={shields}
           keyExtractor={(item: ShieldDTO) => item.id}
-          renderItem={({ item }): JSX.Element =>
+          renderItem={(item: ShieldDTO) =>
             <Shields data={item} />
           }
         />
