@@ -1,7 +1,7 @@
 export interface ArmorDTO {
   id: string;
   name: string;
-  image: string;
+  image: string | any;
   description: string;
   category: string;
   dmgNegation: [

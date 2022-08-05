@@ -1,6 +1,4 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import GasolineSvg from '@assets/gasoline.svg'
+import React, { useState } from 'react'
 
 import {
   Container,
@@ -11,9 +9,9 @@ import {
   Rent,
   Period,
   Price,
-  Type,
   CarImage
 } from './style';
+import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 
 interface ArmorData {
   name: string;
@@ -21,26 +19,29 @@ interface ArmorData {
   image: string;
 }
 
-interface Props {
+type Props = RectButtonProps & {
   data: ArmorData;
 }
 
-export function Armors({ data }: Props) {
+export function Armors({ data, ...rest }: Props) {
+
   return (
-    <Container>
-      <Details>
-        <Brand>Equipamento</Brand>
-        <Name numberOfLines={1}>{data?.name}</Name>
+    <RectButton {...rest}>
+      <Container>
+        <Details>
+          <Brand>Equipamento</Brand>
+          <Name numberOfLines={1}>{data?.name}</Name>
 
-        <About>
-          <Rent>
-            <Period>Categoria</Period>
-            <Price>{data?.category}</Price>
-          </Rent>
-        </About>
-      </Details>
+          <About>
+            <Rent>
+              <Period>Categoria</Period>
+              <Price>{data?.category}</Price>
+            </Rent>
+          </About>
+        </Details>
 
-      <CarImage source={{ uri: data?.image }} resizeMode="contain" />
-    </Container>
+        <CarImage source={{ uri: data?.image }} resizeMode="contain" />
+      </Container>
+    </RectButton>
   )
 }

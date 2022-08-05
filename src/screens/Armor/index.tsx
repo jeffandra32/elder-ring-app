@@ -8,13 +8,22 @@ import { api } from '@services/api';
 import { ArmorDTO } from '@src/dtos/ArmorDTO';
 import { Load } from '@components/Load';
 import theme from '../../styles/theme';
+import { useNavigation } from '@react-navigation/native';
 
 
 
 export function ArmorsScreen() {
   const [armors, setArmors] = useState<ArmorDTO[]>([]);
   const [countArmors, setCountArmors] = useState(0);
+  const { navigate } = useNavigation<any>();
+
   const [loading, setLoading] = useState(true);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  function handleCarDatails(data: any) {
+    navigate('ArmorDetails', { data });
+  }
+
 
   useEffect(() => {
     async function fetchArmmors() {
@@ -46,7 +55,7 @@ export function ArmorsScreen() {
           data={armors}
           keyExtractor={(item: ArmorDTO) => item.id}
           renderItem={({ item }): JSX.Element =>
-            <Armors data={item} />
+            <Armors data={item} onPress={() => handleCarDatails(item)} />
           }
         />
       }

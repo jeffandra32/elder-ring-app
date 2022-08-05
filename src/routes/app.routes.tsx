@@ -9,6 +9,7 @@ import { ShieldsScreen } from '@screens/Shields';
 import { AshesScreen } from '@screens/Ashes';
 import { TalismansScreen } from '@screens/Talisman';
 import { BossesScreen } from '@screens/Boss';
+import { ArmorDetails } from '@screens/Armor/ArmorDetails';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -46,6 +47,10 @@ export function AppRoutes() {
       <Screen
         name="BossesScreen"
         component={BossesScreen}
+      />
+      <Screen
+        name="ArmorDetails"
+        component={ArmorDetails}
       />
     </Navigator>
   )
